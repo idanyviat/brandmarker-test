@@ -10,12 +10,23 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint .",
-    "test": "npm run editorconfig"
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp css",
+    "start": "gulp start"
   },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "editorconfig-cli": [
     "*.json",
-    "source/*.html"
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
   ],
   "engines": {
     "node": "8.16"
@@ -23,10 +34,27 @@
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "browser-sync": "^2.26.7",
+    "editorconfig": "^0.15.3",
+    "editorconfig-cli": "^0.3.0",
     "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5"
-  }
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idanyviat/brandmarker-test.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Daniil Dulgher",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/idanyviat/brandmarker-test/issues"
+  },
+  "homepage": "https://github.com/idanyviat/brandmarker-test#readme"
 }
