@@ -1,0 +1,155 @@
+.main-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-page__aside {
+  display: flex;
+  height: 44px;
+  flex-basis: 100%;
+  background-color: black;
+}
+
+.main-page__info {
+  margin-top: 13px;
+  color: white;
+
+  a:nth-child(1) {
+    margin-left: 75px;
+    margin-right: 22px;
+  }
+
+  a:nth-child(2) {
+    margin-right: 22px;
+  }
+
+  a:nth-child(3) {
+    margin-right: 50px;
+  }
+
+  span {
+    margin-left: 0;
+    margin-top: 3px;
+    margin-right: 12px;
+    font-family: "Roboto", sans-serif, "Arial", sans-serif;
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 13px;
+    font-family: "Raleway", sans-serif, "Arial", sans-serif;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.main-page__info--discaunt {
+  margin-top: 9px;
+}
+
+.main-page__info--services {
+  text-decoration: none;
+  margin-left: 70px;
+  margin-top: 9px;
+}
+
+.main-page__tel {
+  margin-left: 500px;
+  margin-top: 0;
+  padding-top: 13px;
+  padding-left: 52px;
+  width: 195px;
+  background-color: #2d2d2d;
+  p {
+    margin-left: 0;
+    margin-top: 0;
+    font-weight: 400;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.main-page__info--adress {
+  font-size: 13px;
+  margin-left: 76px;
+  margin-top: 0;
+}
+
+.main-page__nav {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.main-page__nav--img {
+  margin-left: 70px;
+  margin-right: 140px;
+
+  img {
+    height: 35px;
+    width: 270px;
+    margin-top: 19px;
+  }
+}
+.main-page__sex {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+.main-page__sex--sex {
+  margin-right: 145px;
+  a {
+    margin-top: 30px;
+    color: black;
+    font-size: 13px;
+    font-family: "Raleway Semi-bold", sans-serif, "Arial", sans-serif;
+    text-decoration: none;
+  }
+
+  a:nth-child(1) {
+    margin-right: 75px;
+  }
+}
+
+.main-page__nav--product {
+  margin-top: 15px;
+  height: 55px;
+
+  p {
+    margin-right: 48px;
+  }
+
+  p:nth-child(1) {
+    margin-right: 62px;
+  }
+}
+
+.main-page__search {
+  margin-top: 17px;
+  margin-left: 67px;
+  .main-page__search--btn {
+    margin-left: 0;
+
+    input {
+      width: 316px;
+      height: 36px;
+      padding-left: 22px;
+      border: 1px solid #f1f1f1;
+      border-radius: 42px;
+      outline: none;
+    }
+  }
+
+  label::before {
+    content: " ";
+    position: absolute;
+    width: 316px;
+    height: 100px;
+    background: url("../img/search.png");
+    background-repeat: no-repeat;
+    background-position-x: 279px;
+  }
+}

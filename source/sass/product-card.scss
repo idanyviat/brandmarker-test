@@ -1,0 +1,97 @@
+.product-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product-card__big {
+  width: 575px;
+  height: 700px;
+  margin-top: 63px;
+
+  P {
+    width: 185px;
+    font-size: 24px;
+    margin-left: 52px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 42px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    width: 170px;
+    height: 46px;
+    margin-left: 52px;
+  }
+}
+
+.product-card__big--woman {
+  margin-left: 75px;
+  background-image: url(../img/big-woman-background.png);
+  background-repeat: no-repeat;
+  a {
+    background-color: #4f424e;
+  }
+}
+
+.product-card__big--man {
+  margin-left: 30px;
+  background-image: url(../img/background-man-big.png);
+  background-repeat: no-repeat;
+  a {
+    background-color: #313332;
+  }
+}
+
+.product-card__small {
+  P {
+    width: 185px;
+    font-size: 24px;
+    margin-left: 52px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 42px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    width: 170px;
+    height: 46px;
+    margin-left: 52px;
+  }
+}
+
+.product-card__small--woman {
+  width: 571px;
+  height: 336px;
+  margin-left: 30px;
+  margin-top: 63px;
+  background-image: url(../img/woman-small.png);
+  background-repeat: no-repeat;
+  a {
+    background-color: #253e5e;
+  }
+}
+
+.product-card__small--man {
+  position: absolute;
+  top: 542px;
+  left: 1250px;
+  width: 571px;
+  height: 336px;
+  margin-left: 30px;
+  background-image: url(../img/man-small.png);
+  background-repeat: no-repeat;
+  a {
+    background-color: #3d333b;
+  }
+}
