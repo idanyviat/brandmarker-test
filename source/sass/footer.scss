@@ -1,19 +1,70 @@
 .footer {
+  display: flex;
+  flex-direction: row;
+  height: 403px;
+  background-color: #1f1f1f;
 }
 
 .footer__img {
+  margin-top: 45px;
+  margin-left: 222px;
 }
 
 .footer__info {
-  .footer__info--woman {
+  display: flex;
+  flex-direction: column;
+  a {
+    color: #6a6a6a;
+    text-decoration: none;
   }
-  .footer__info--man {
+}
+
+.footer__info--woman,
+.footer__info--man,
+.footer__info--discaunt,
+.footer__info--rewiew {
+  margin-left: 147px;
+  :nth-child(1) {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 44px;
+    margin-bottom: 32px;
   }
-  .footer__info--discaunt {
+
+  a {
+    margin-bottom: 8px;
   }
-  .footer__info--rewiew {
+}
+
+.footer__info--man {
+  margin-left: 100px;
+}
+
+.footer__info--discaunt {
+  margin-left: 112px;
+}
+
+.footer__info--rewiew {
+  margin-left: 52px;
+}
+
+.footer__info--contacts {
+  width: 200px;
+  margin-left: 172px;
+  :nth-child(1) {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 44px;
+    margin-bottom: 32px;
   }
-  .footer__info--contacts {
+  span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #757575;
   }
 }
 
