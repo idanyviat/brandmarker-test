@@ -25,9 +25,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
-  .catalog__promo h1 {
+  .catalog__promo h1, .catalog__promo h2 {
     font-size: 40px;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-left: 80px; }
 
 .catalog__product {
   display: -webkit-box;
@@ -50,6 +51,10 @@ body {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s; }
+  .catalog__item li {
+    text-align: left; }
+  .catalog__item a {
+    text-align: center; }
 
 .catalog__item--slider {
   position: relative;
@@ -57,20 +62,40 @@ body {
   overflow: hidden; }
 
 .catalog__item--info {
+  padding-left: 140px;
+  padding-right: 150px;
+  padding-top: 14px;
+  padding-bottom: 34px;
+  margin-left: 0;
+  background-color: grey;
   color: white;
   text-decoration: none;
   overflow: hidden; }
 
-ul:hover {
+ul .catalog__item:hover {
+  width: 365px;
+  margin-left: 23px;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   z-index: 1; }
-  ul:hover .catalog__item--name,
-  ul:hover .catalog__item--price,
-  ul:hover .catalog__item--info {
+  ul .catalog__item:hover .catalog__item--name,
+  ul .catalog__item:hover .catalog__item--price,
+  ul .catalog__item:hover .catalog__item--info,
+  ul .catalog__item:hover .catalog__item--discaunt {
+    margin-left: 0;
     text-decoration: none;
+    -webkit-transform: scale(1);
+            transform: scale(1);
     overflow: visible;
-    color: black; }
+    color: black;
+    background-color: white;
+    opacity: 1; }
+  ul .catalog__item:hover li .catalog__item--info {
+    display: block;
+    background-color: #e6f8f7; }
+  ul .catalog__item:hover span {
+    margin-left: 10px;
+    text-decoration: none; }
 
 .catalog__item--price span {
   font-weight: 700; }
@@ -83,7 +108,8 @@ ul:hover {
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
   border-top: 0;
-  border-bottom: 0; }
+  border-bottom: 0;
+  opacity: 0; }
 
 .catalog__item--line {
   position: relative;
@@ -109,11 +135,12 @@ ul:hover {
   height: 20px;
   width: 150px; }
   .catalog__item--discaunt :nth-child(1) {
+    text-decoration: none;
     width: 44px;
     height: 21px;
     position: relative;
     top: -15px;
-    left: -15px;
+    left: -5px;
     background-color: #53902c;
     padding-left: 10px;
     padding-top: 6px;
@@ -126,7 +153,7 @@ ul:hover {
     height: 21px;
     position: relative;
     top: -15px;
-    left: -15px;
+    left: -5px;
     margin-left: 4px;
     padding-left: 10px;
     padding-top: 6px;
@@ -134,90 +161,6 @@ ul:hover {
     padding-right: 10px;
     border-radius: 5px;
     background-color: #e83841; }
-
-.ant-carousel {
-  height: 713px;
-  padding-top: 10px;
-  margin-left: 10px;
-  z-index: 0;
-  width: auto;
-  position: relative; }
-
-.ant-carousel-element {
-  width: 270px;
-  text-align: center;
-  display: block;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  z-index: 1;
-  padding-top: 50px;
-  width: 400px;
-  height: 400px; }
-
-.ant-carousel-hider {
-  overflow: hidden;
-  width: 1840px;
-  height: 727px; }
-
-.ant-carousel-list {
-  width: auto;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-
-div.ant-carousel-arrow-left,
-div.ant-carousel-arrow-right {
-  width: 22px;
-  height: 40px;
-  position: absolute;
-  cursor: pointer;
-  opacity: 0.6;
-  z-index: 32; }
-
-div.ant-carousel-arrow-left {
-  left: 1620px;
-  top: -7%;
-  display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat; }
-
-div.ant-carousel-arrow-right {
-  right: 156px;
-  top: -7%;
-  display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat; }
-
-div.ant-carousel-arrow-left:hover {
-  opacity: 1.0; }
-
-div.ant-carousel-arrow-right:hover {
-  opacity: 1.0; }
-
-div.ant-carousel-dots {
-  display: none;
-  width: 100%;
-  height: auto;
-  position: absolute;
-  left: 0;
-  bottom: -30px;
-  z-index: 30;
-  text-align: center; }
-
-span.ant-dot {
-  width: 10px;
-  height: 10px;
-  margin: 5px 7px;
-  padding: 0;
-  display: inline-block;
-  background-color: #BBB;
-  border-radius: 5px;
-  cursor: pointer; }
 
 .main-page {
   display: -webkit-box;
@@ -523,6 +466,9 @@ span.ant-dot {
   width: auto;
   position: relative; }
 
+.ant-carousel__second {
+  margin-bottom: 20px; }
+
 .ant-carousel-element {
   width: 270px;
   text-align: center;
@@ -532,8 +478,8 @@ span.ant-dot {
           flex: 0 0 auto;
   z-index: 1;
   padding-top: 50px;
-  width: 400px;
-  height: 400px; }
+  width: 350px;
+  height: 700px; }
 
 .ant-carousel-hider {
   overflow: hidden;
@@ -564,19 +510,96 @@ div.ant-carousel-arrow-right {
 div.ant-carousel-arrow-left {
   left: 1620px;
   top: -7%;
-  display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat; }
+  height: 9px;
+  width: 9px;
+  left: 1690px;
+  top: -7%;
+  border: solid black;
+  border-width: 0px 3px 3px 0px;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(132deg);
+          transform: rotate(132deg); }
 
 div.ant-carousel-arrow-right {
   right: 156px;
   top: -7%;
+  height: 9px;
+  width: 9px;
+  border: solid black;
+  border-width: 0px 3px 3px 0px;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+div.ant-carousel-arrow-left:hover {
+  opacity: 1; }
+
+div.ant-carousel-arrow-right:hover {
+  opacity: 1; }
+
+.for-carousel {
+  margin: 50px auto auto;
+  padding-top: 10px; }
+
+.for-carousel-element {
+  width: 270px;
+  text-align: center;
+  margin-right: 45px; }
+
+.for-carousel {
+  margin-top: 0;
+  padding-top: 0;
+  width: auto;
+  position: relative; }
+
+.for-carousel-hider {
+  overflow: hidden; }
+
+.for-carousel-list {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.for-carousel-element {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+
+div.for-carousel-arrow-left,
+div.for-carousel-arrow-right {
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.6;
+  z-index: 32; }
+
+div.for-carousel-arrow-left {
+  left: 10px;
+  top: 40%;
+  display: block;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat; }
+
+div.for-carousel-arrow-right {
+  right: 10px;
+  top: 40%;
   display: block;
   background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat; }
 
-div.ant-carousel-arrow-left:hover {
+div.for-carousel-arrow-left:hover {
   opacity: 1.0; }
 
-div.ant-carousel-arrow-right:hover {
+div.for-carousel-arrow-right:hover {
   opacity: 1.0; }
 
 /*# sourceMappingURL=style.css.map */

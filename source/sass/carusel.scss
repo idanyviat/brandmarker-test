@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.ant-carousel__second {
+  margin-bottom: 20px;
+}
+
 .ant-carousel-element {
   width: 270px;
   text-align: center;
@@ -14,8 +18,8 @@
   flex: 0 0 auto;
   z-index: 1;
   padding-top: 50px;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 700px;
 }
 
 .ant-carousel-hider {
@@ -46,21 +50,33 @@ div.ant-carousel-arrow-right {
 div.ant-carousel-arrow-left {
   left: 1620px;
   top: -7%;
-  display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
+  height: 9px;
+  width: 9px;
+  left: 1690px;
+  top: -7%;
+  border: solid black;
+  border-width: 0px 3px 3px 0px;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(132deg);
 }
 
 div.ant-carousel-arrow-right {
   right: 156px;
   top: -7%;
-  display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
+  height: 9px;
+  width: 9px;
+  border: solid black;
+  border-width: 0px 3px 3px 0px;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
 }
 
 div.ant-carousel-arrow-left:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 div.ant-carousel-arrow-right:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
