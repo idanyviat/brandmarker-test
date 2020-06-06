@@ -1,0 +1,66 @@
+.ant-carousel {
+  height: 713px;
+  padding-top: 10px;
+  margin-left: 10px;
+  z-index: 0;
+  width: auto;
+  position: relative;
+}
+
+.ant-carousel-element {
+  width: 270px;
+  text-align: center;
+  display: block;
+  flex: 0 0 auto;
+  z-index: 1;
+  padding-top: 50px;
+  width: 400px;
+  height: 400px;
+}
+
+.ant-carousel-hider {
+  overflow: hidden;
+  width: 1840px;
+  height: 727px;
+}
+
+.ant-carousel-list {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+div.ant-carousel-arrow-left,
+div.ant-carousel-arrow-right {
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.6;
+  z-index: 32;
+}
+
+div.ant-carousel-arrow-left {
+  left: 1620px;
+  top: -7%;
+  display: block;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
+}
+
+div.ant-carousel-arrow-right {
+  right: 156px;
+  top: -7%;
+  display: block;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
+}
+
+div.ant-carousel-arrow-left:hover {
+  opacity: 1.0;
+}
+
+div.ant-carousel-arrow-right:hover {
+  opacity: 1.0;
+}
