@@ -38,12 +38,24 @@
   }
 }
 
+.footer__info--woman a:hover {
+  color: white;
+}
+
 .footer__info--man {
   margin-left: 100px;
 }
 
+.footer__info--man a:hover {
+  color: white;
+}
+
 .footer__info--discaunt {
   margin-left: 112px;
+}
+
+.footer__info--discaunt a:hover {
+  color: white;
 }
 
 .footer__info--rewiew {
@@ -53,7 +65,8 @@
 .footer__info--contacts {
   width: 200px;
   margin-left: 172px;
-  :nth-child(1) {
+  color: #6a6a6a;;
+  h3 {
     color: white;
     text-transform: uppercase;
     font-weight: 700;
@@ -61,6 +74,7 @@
     margin-top: 44px;
     margin-bottom: 32px;
   }
+
   span {
     font-size: 13px;
     font-weight: 700;

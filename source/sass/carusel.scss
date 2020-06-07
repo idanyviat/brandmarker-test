@@ -1,0 +1,107 @@
+.ant-carousel {
+  height: 713px;
+  padding-top: 10px;
+  margin-left: 10px;
+  z-index: 0;
+  width: auto;
+  position: relative;
+}
+
+.ant-carousel__second {
+  margin-bottom: 20px;
+}
+
+.ant-carousel-element {
+  width: 270px;
+  text-align: center;
+  display: block;
+  flex: 0 0 auto;
+  z-index: 1;
+  padding-top: 50px;
+  width: 350px;
+  height: 700px;
+}
+
+.ant-carousel-element:hover {
+    div.for-carousel-arrow-left,
+    div.for-carousel-arrow-right {
+      visibility: visible;
+    }
+}
+
+.ant-carousel-hider {
+  overflow: hidden;
+  width: 1840px;
+  height: 727px;
+}
+
+.ant-carousel-list {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+div.ant-carousel-arrow-left,
+div.ant-carousel-arrow-right {
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.6;
+  z-index: 32;
+}
+
+div.ant-carousel-arrow-left {
+  left: 1620px;
+  top: -7%;
+  height: 9px;
+  width: 9px;
+  left: 1690px;
+  top: -7%;
+  border: solid black;
+  border-width: 0px 3px 3px 0px;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(132deg);
+  opacity: 1;
+}
+
+div.ant-carousel-arrow-right {
+  right: 156px;
+  top: -7%;
+  height: 9px;
+  width: 9px;
+  border: solid black;
+  border-width: 0px 3px 3px 0px;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  opacity: 1;
+}
+
+.ant-carousel-arrow-right::after,
+.ant-carousel-arrow-left::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.3;
+}
+
+div.ant-carousel-arrow-left:hover {
+  opacity: 1;
+}
+
+div.ant-carousel-arrow-right:hover {
+  opacity: 1;
+}
+
+

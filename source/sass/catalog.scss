@@ -1,11 +1,150 @@
-.catalog {
-}
-
 .catalog__promo {
+  display: flex;
+  flex-direction: row;
+  h1, h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-left: 80px;
+  }
 }
 
 .catalog__product {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .catalog__item {
+  list-style-type: none;
+  width: 349px;
+  margin-left: 14px;
+  transform: scale(1);
+  transition: transform 0.5s;
+
+  li {
+    text-align: left;
+  }
+
+  a {
+    text-align: center;
+   }
 }
+
+.catalog__item--slider {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+}
+
+.catalog__item--info {
+  padding-left: 140px;
+  padding-right: 150px;
+  padding-top: 14px;
+  padding-bottom: 34px;
+  margin-left: 0;
+  background-color: grey;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+ul .catalog__item:hover {
+  width: 365px;
+  margin-left: 23px;
+  transform: scale(1.1);
+  z-index: 1;
+  .catalog__item--name,
+  .catalog__item--price,
+  .catalog__item--info,
+  .catalog__item--discaunt {
+    margin-left: 0;
+    text-decoration: none;
+    transform: scale(1.0);
+    overflow: visible;
+    color: black;
+    background-color: white;
+    opacity: 1;
+  }
+
+  li .catalog__item--info {
+    display: block;
+    background-color:#e6f8f7;
+  }
+  span {
+    margin-left: 10px;
+    text-decoration: none;
+  }
+}
+
+.catalog__item--price span {
+  font-weight: 700;
+}
+
+.catalog__item--name,
+.catalog__item--price,
+.catalog__item--info {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+  border-top: 0;
+  border-bottom: 0;
+  opacity: 0;
+}
+
+.catalog__item--line {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  left: 0;
+  transition: all 1s;
+}
+
+.catalog__item--action {
+  :nth-child(1) {
+    margin-left: 0;
+    color: black;
+    text-decoration: line-through;
+  }
+  :nth-child(2) {
+    margin-left: 5px;
+    font-weight: 700;
+    color: #e83841;
+  }
+}
+
+.catalog__item--discaunt {
+  position: relative;
+  color: white;
+  height: 20px;
+  width: 150px;
+  :nth-child(1) {
+    text-decoration: none;
+    width: 44px;
+    height: 21px;
+    position: relative;
+    top: -15px;
+    left: -5px;
+    background-color: #53902c;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    border-radius: 5px;
+  }
+  :nth-child(2) {
+    color: white;
+    width: 44px;
+    height: 21px;
+    position: relative;
+    top: -15px;
+    left: -5px;
+    margin-left: 4px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: #e83841;
+  }
+}
+

@@ -39,6 +39,11 @@
   }
 }
 
+.product-card__big--woman:hover {
+  background-size: 120%;
+  background-position-x: -100px;
+}
+
 .product-card__big--man {
   margin-left: 30px;
   background-image: url(../img/background-man-big.png);
@@ -46,6 +51,11 @@
   a {
     background-color: #313332;
   }
+}
+
+.product-card__big--man:hover {
+  background-size: 120%;
+  background-position-x: -100px;
 }
 
 .product-card__small {
