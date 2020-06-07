@@ -226,4 +226,4 @@ Ant.initialize = function(that) {
 	}
 };
 
-new Ant("for");
+new Ant("for"); new Ant("five"); new Ant("six"); new Ant("seven"); new Ant("eight"); new Ant("nine"); new Ant("ten"); new Ant("eleven"); new Ant("twelve"); new Ant("tree"); new Ant("thirteen");

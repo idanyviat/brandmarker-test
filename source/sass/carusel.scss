@@ -22,6 +22,13 @@
   height: 700px;
 }
 
+.ant-carousel-element:hover {
+    div.for-carousel-arrow-left,
+    div.for-carousel-arrow-right {
+      visibility: visible;
+    }
+}
+
 .ant-carousel-hider {
   overflow: hidden;
   width: 1840px;
@@ -59,6 +66,7 @@ div.ant-carousel-arrow-left {
   display: inline-block;
   padding: 3px;
   transform: rotate(132deg);
+  opacity: 1;
 }
 
 div.ant-carousel-arrow-right {
@@ -71,6 +79,21 @@ div.ant-carousel-arrow-right {
   display: inline-block;
   padding: 3px;
   transform: rotate(-45deg);
+  opacity: 1;
+}
+
+.ant-carousel-arrow-right::after,
+.ant-carousel-arrow-left::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.3;
 }
 
 div.ant-carousel-arrow-left:hover {
@@ -80,3 +103,5 @@ div.ant-carousel-arrow-left:hover {
 div.ant-carousel-arrow-right:hover {
   opacity: 1;
 }
+
+

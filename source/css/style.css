@@ -212,6 +212,15 @@ ul .catalog__item:hover {
   margin-left: 70px;
   margin-top: 9px; }
 
+.main-page__info--services::before {
+  content: "";
+  position: absolute;
+  left: 600px;
+  width: 30px;
+  height: 30px;
+  background: url("../img/scissors.png");
+  background-repeat: no-repeat; }
+
 .main-page__tel {
   margin-left: 500px;
   margin-top: 0;
@@ -269,7 +278,8 @@ ul .catalog__item:hover {
     font-family: "Raleway Semi-bold", sans-serif, "Arial", sans-serif;
     text-decoration: none; }
   .main-page__sex--sex a:nth-child(1) {
-    margin-right: 75px; }
+    margin-right: 30px;
+    border-bottom: 2px solid black; }
 
 .main-page__nav--product {
   margin-top: 15px;
@@ -339,12 +349,20 @@ ul .catalog__item:hover {
   .product-card__big--woman a {
     background-color: #4f424e; }
 
+.product-card__big--woman:hover {
+  background-size: 120%;
+  background-position-x: -100px; }
+
 .product-card__big--man {
   margin-left: 30px;
   background-image: url(../img/background-man-big.png);
   background-repeat: no-repeat; }
   .product-card__big--man a {
     background-color: #313332; }
+
+.product-card__big--man:hover {
+  background-size: 120%;
+  background-position-x: -100px; }
 
 .product-card__small P {
   width: 185px;
@@ -434,19 +452,29 @@ ul .catalog__item:hover {
   .footer__info--rewiew a {
     margin-bottom: 8px; }
 
+.footer__info--woman a:hover {
+  color: white; }
+
 .footer__info--man {
   margin-left: 100px; }
 
+.footer__info--man a:hover {
+  color: white; }
+
 .footer__info--discaunt {
   margin-left: 112px; }
+
+.footer__info--discaunt a:hover {
+  color: white; }
 
 .footer__info--rewiew {
   margin-left: 52px; }
 
 .footer__info--contacts {
   width: 200px;
-  margin-left: 172px; }
-  .footer__info--contacts :nth-child(1) {
+  margin-left: 172px;
+  color: #6a6a6a; }
+  .footer__info--contacts h3 {
     color: white;
     text-transform: uppercase;
     font-weight: 700;
@@ -480,6 +508,10 @@ ul .catalog__item:hover {
   padding-top: 50px;
   width: 350px;
   height: 700px; }
+
+.ant-carousel-element:hover div.for-carousel-arrow-left,
+.ant-carousel-element:hover div.for-carousel-arrow-right {
+  visibility: visible; }
 
 .ant-carousel-hider {
   overflow: hidden;
@@ -519,7 +551,8 @@ div.ant-carousel-arrow-left {
   display: inline-block;
   padding: 3px;
   -webkit-transform: rotate(132deg);
-          transform: rotate(132deg); }
+          transform: rotate(132deg);
+  opacity: 1; }
 
 div.ant-carousel-arrow-right {
   right: 156px;
@@ -531,7 +564,21 @@ div.ant-carousel-arrow-right {
   display: inline-block;
   padding: 3px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
+          transform: rotate(-45deg);
+  opacity: 1; }
+
+.ant-carousel-arrow-right::after,
+.ant-carousel-arrow-left::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.3; }
 
 div.ant-carousel-arrow-left:hover {
   opacity: 1; }
@@ -553,6 +600,9 @@ div.ant-carousel-arrow-right:hover {
   padding-top: 0;
   width: auto;
   position: relative; }
+  .for-carousel div.for-carousel-arrow-left,
+  .for-carousel div.for-carousel-arrow-right {
+    visibility: hidden; }
 
 .for-carousel-hider {
   overflow: hidden; }
@@ -588,18 +638,32 @@ div.for-carousel-arrow-left {
   left: 10px;
   top: 40%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat; }
+  height: 9px;
+  width: 9px;
+  border: solid black;
+  border-width: 0px 2px 2px 0px;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(132deg);
+          transform: rotate(132deg); }
 
 div.for-carousel-arrow-right {
   right: 10px;
   top: 40%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat; }
+  height: 9px;
+  width: 9px;
+  border: solid black;
+  border-width: 0px 2px 2px 0px;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
 
 div.for-carousel-arrow-left:hover {
-  opacity: 1.0; }
+  opacity: 1; }
 
 div.for-carousel-arrow-right:hover {
-  opacity: 1.0; }
+  opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
